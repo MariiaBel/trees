@@ -26,6 +26,16 @@ namespace Trees
                 Console.WriteLine(item);
             }
 
+            Console.WriteLine(tree.Contains(9));
+            tree.Remove(9);
+            Console.WriteLine(tree.Contains(9));
+
+            foreach (var item in tree)
+            {
+                Console.WriteLine(item);
+            }
+
+            tree.Clear();
             Console.ReadKey();
         }
     }
