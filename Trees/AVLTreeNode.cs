@@ -108,8 +108,6 @@ namespace Trees
 
         internal void Balance()
         {
-            TreeState state = State;
-
             if (State == TreeState.RightHeavy)
             {
                 if (Right != null && Right.BalanceFactory < 0) LeftRightBalance();
