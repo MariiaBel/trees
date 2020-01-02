@@ -76,7 +76,7 @@ namespace Trees
 
         private int MaxChildHeight(AVLTreeNode<TNode> node)
         {
-            if (node != null) return 1 + Math.Max(MaxChildHeight(Left), MaxChildHeight(Right));
+            if (node != null) return 1 + Math.Max(MaxChildHeight(node.Left), MaxChildHeight(node.Right));
             return 0;
         }
 
@@ -108,6 +108,8 @@ namespace Trees
 
         internal void Balance()
         {
+            TreeState state = State;
+
             if (State == TreeState.RightHeavy)
             {
                 if (Right != null && Right.BalanceFactory < 0) LeftRightBalance();
@@ -122,12 +124,12 @@ namespace Trees
 
         private void RightRotation()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         private void RightLeftBalance()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         private void LeftRotation()
@@ -140,7 +142,7 @@ namespace Trees
 
         private void LeftRightBalance()
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         private void ReplaceRoot(AVLTreeNode<TNode> newRoot)
@@ -151,6 +153,7 @@ namespace Trees
                 else if(this.Parent.Right == this) this.Parent.Right = newRoot;
             } 
             else tree.Head = newRoot;
+
             newRoot.Parent = this.Parent;
             this.Parent = newRoot;
         }

@@ -54,6 +54,8 @@ namespace Trees
                 if (node.Right == null) node.Right = new AVLTreeNode<T>(value, node, this);
                 else AddTo(node.Right, value);
             }
+
+            node.Balance();
         }
 
         public bool Contains(T value)

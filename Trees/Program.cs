@@ -19,7 +19,7 @@ namespace Trees
             //tree.Add(4);
             //tree.Add(5);
 
-            tree.Add(new int[] { 1, 2, 5, 7, 9, 3, 4, 2, 1, 4 });
+            tree.Add(new int[] { 1, 2, 3, 9 });
 
             foreach (var item in tree)
             {
@@ -27,7 +27,7 @@ namespace Trees
             }
 
             Console.WriteLine(tree.Contains(9));
-            tree.Remove(9);
+            tree.Remove(2);
             Console.WriteLine(tree.Contains(9));
 
             foreach (var item in tree)
